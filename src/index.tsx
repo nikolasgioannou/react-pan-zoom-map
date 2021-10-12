@@ -74,10 +74,14 @@ const PanZoomMap: React.FC<PanZoomMapProps> = ({
 
     const handleZoom = (e: WheelEvent): [Translation, number] => {
       const xScale =
-        (e.clientX - mapElement.offsetLeft - translation.current.x) /
+        (e.clientX -
+          mapElement.getBoundingClientRect().x -
+          translation.current.x) /
         zoom.current;
       const yScale =
-        (e.clientY - mapElement.offsetTop - translation.current.y) /
+        (e.clientY -
+          mapElement.getBoundingClientRect().y -
+          translation.current.y) /
         zoom.current;
 
       const adjSensitivity =
@@ -93,8 +97,8 @@ const PanZoomMap: React.FC<PanZoomMapProps> = ({
       }
 
       const newTranslation = {
-        x: e.clientX - mapElement.offsetLeft - xScale * newZoom,
-        y: e.clientY - mapElement.offsetTop - yScale * newZoom,
+        x: e.clientX - mapElement.getBoundingClientRect().x - xScale * newZoom,
+        y: e.clientY - mapElement.getBoundingClientRect().y - yScale * newZoom,
       };
 
       return [newTranslation, newZoom];
