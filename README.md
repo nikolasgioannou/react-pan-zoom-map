@@ -1,6 +1,6 @@
 # react-pan-zoom-map
 
-Bring Figma-like pan and zoom interactions to your React app. Unlike other packages, react-pan-zoom-map works seamlessly with trackpads (scroll to pan and pinch to zoom) in addition to mice (grab to pan and wheel to zoom). [Try it out for yourself...](https://react-pan-zoom-map.up.railway.app/)
+Bring Figma-like pan and zoom interactions to your React app. Unlike other packages, react-pan-zoom-map works seamlessly with trackpads (scroll to pan and pinch to zoom) in addition to mice (grab to pan and wheel to zoom). [Try it out for yourself...](https://react-pan-zoom-map.vercel.app/)
 
 ![Example](./example.gif)
 
